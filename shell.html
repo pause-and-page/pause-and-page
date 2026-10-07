@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<title>Pause and Page</title>
+<style>
+/*__CSS__*/
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF9E95"/><stop offset=".22" stop-color="#FFC38A"/><stop offset=".42" stop-color="#FFE27A"/><stop offset=".62" stop-color="#9ADDB3"/><stop offset=".82" stop-color="#94C5F5"/><stop offset="1" stop-color="#C2AEF7"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="10" fill="url(#lg)"/><rect x="8" y="6.5" width="16" height="19" rx="3.5" fill="#fff"/><rect x="12" y="11" width="2.6" height="10" rx="1.3" fill="#203047"/><rect x="17.4" y="11" width="2.6" height="10" rx="1.3" fill="#203047"/></svg>
+    <span class="brand-name">Pause and Page</span>
+  </div>
+  <button type="button" class="urgent-btn" id="urgentBtn" data-act="urgent">Get urgent help</button>
+  <button type="button" class="icon-btn" id="profileBtn" data-act="profile" aria-label="Profile and privacy"><span data-ic="user"></span></button>
+</header>
+
+<div class="shell">
+  <nav class="tabs" id="nav" aria-label="Main">
+    <button type="button" data-act="tab" data-r="today" class="t-today"><span data-ic="sun"></span><span>Today</span></button>
+    <button type="button" data-act="tab" data-r="cbt" class="t-cbt"><span data-ic="sprout"></span><span>CBT</span></button>
+    <button type="button" data-act="tab" data-r="journal" class="t-journal"><span data-ic="book"></span><span>Journal</span></button>
+    <button type="button" data-act="tab" data-r="progress" class="t-progress"><span data-ic="chart"></span><span>Progress</span></button>
+    <button type="button" data-act="tab" data-r="support" class="t-support"><span data-ic="heart"></span><span>Support</span></button>
+  </nav>
+  <main id="main" tabindex="-1"></main>
+  <aside id="side" aria-label="Today at a glance"></aside>
+</div>
+
+<!-- Urgent help. Static on purpose: numbers are bundled in the app so they work offline,
+     without login, payment or onboarding. To add other countries, add a section like this
+     one and choose it by region. India details last reviewed: October 2026. -->
+<section id="urgent" hidden aria-labelledby="urgentTitle">
+  <div class="uwrap">
+    <button type="button" class="link" data-act="closeUrgent">&#8249; Back</button>
+    <h1 id="urgentTitle" tabindex="-1">Get urgent help</h1>
+    <p class="region">Resources for India</p>
+    <div class="alert" role="alert"><p>If you have already harmed yourself, taken an overdose, or feel you may act on thoughts of suicide, call 112 or go to the nearest emergency department now. Contact someone you trust and ask them to stay with you.</p></div>
+
+    <a class="ubtn em" href="tel:112"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Call 112<small>Emergency response</small></span></a>
+    <p class="usub">For immediate danger, a suicide attempt, serious injury, or an urgent medical emergency. Connects with police, fire and health emergency services.</p>
+
+    <a class="ubtn tm" href="tel:14416"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>Call Tele-MANAS<small>14416 · free, 24 hours</small></span></a>
+    <p class="usub">Free, 24-hour mental health counselling and support across India. This is a counselling line, not emergency dispatch. Also reachable on <a href="tel:18008914416">1800-891-4416</a>.</p>
+
+    <div id="uTrusted"><a class="ubtn outline" href="#" data-act="uTrustedForm">Contact my trusted person</a></div>
+    <div id="uCampus"><a class="ubtn outline" href="#" data-act="uCampus">View campus support</a></div>
+
+    <div class="notice">This app is not an emergency service. Entries are not continuously monitored.</div>
+    <p class="fine">Tapping a call button opens your phone’s dialler with the number filled in. Nothing is called, shared or sent automatically, and your location isn’t shared.</p>
+    <p class="fine">Helpline details are stored on this device and work offline. Last reviewed October 2026.</p>
+  </div>
+</section>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+/*__JS__*/
+</script>
+</body>
+</html>

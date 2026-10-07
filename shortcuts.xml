@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Long-press the app icon for "Get urgent help": opens straight to the help screen. -->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="urgent_help"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_help"
+        android:shortcutShortLabel="@string/shortcut_urgent_short"
+        android:shortcutLongLabel="@string/shortcut_urgent_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.pauseandpage.app"
+            android:targetClass="com.pauseandpage.app.MainActivity"
+            android:data="pauseandpage://urgent" />
+    </shortcut>
+</shortcuts>
